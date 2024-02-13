@@ -1,11 +1,9 @@
 const express = require("express"),
   morgan = require("morgan"),
   bodyParser = require("body-parser"),
+  uuid = require("uuid"),
   mongoose = require("mongoose"),
-  Models = require("./models.js"),
-  multer = require("multer"),
-  multerS3 = require("multer-s3"),
-  aws = require("aws-sdk");
+  Models = require("./models.js");
 
 const app = express();
 
@@ -14,28 +12,6 @@ const { check, validationResult } = require("express-validator");
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// AWS configurations
-aws.config.update({
-  accessKeyId: "AKIAVEILPDOZWNUVOZNS",
-  secretAccessKey: "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",
-  region: "us-east-1",
-});
-
-const s3 = new aws.S3();
-
-// Set up multer with S3 storage
-const upload = multer({
-  storage: multerS3({
-    s3: s3,
-    bucket: "imagebucketresizer",
-    acl: "public-read", // Set the ACL for the uploaded file
-    key: function (req, file, cb) {
-      // Define the key (filename) for the uploaded file
-      cb(null, "original-image-" + Date.now() + "-" + file.originalname);
-    },
-  }),
-});
 
 // allows CORs
 const cors = require("cors");
@@ -356,6 +332,8 @@ app.delete(
       });
   }
 );
+
+// Add image to user profile
 
 // Delete a user
 app.delete(
