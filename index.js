@@ -333,6 +333,8 @@ app.delete(
   }
 );
 
+// Add image to user profile
+
 // Delete a user
 app.delete(
   "/users/:Username",
