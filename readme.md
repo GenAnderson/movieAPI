@@ -11,5 +11,5 @@ This is a REST API backend server for the following apps that are also in my rep
 - Express
 - Passport
 - MongoDB
-- React
+- Uses CORS
 - Hosted through Render
