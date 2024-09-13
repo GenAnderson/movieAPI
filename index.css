@@ -26,3 +26,19 @@ tr {
 td {
   padding: 0.5rem;
 }
+
+/* 960px */
+@media (max-width: 60em) {
+  html,
+  body {
+    font-size: 90%;
+    margin: 0.5rem;
+  }
+}
+
+/* 784px */
+@media (max-width: 49em) {
+  table {
+    overflow-x: auto;
+  }
+}
