@@ -5,10 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Index</title>
+    <link rel="stylesheet" href="index.css" />
+    <title>Myflix API documentation</title>
   </head>
   <body>
-    <h1>Index Page</h1>
-    <p>This is my index page</p>
+    <h1>MyFlix API documentation</h1>
+
+    <p class="headerText">
+      This api will allow you to receive information on movies, directors, and
+      genres as well as create your own profile so data can be saved about your
+      favorite movies
+    </p>
+    <p class="headerText">
+      Note: this library contains a very limited amount of movies as this is my
+      own library
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Business Logic</th>
+          <th>Endpoint</th>
+          <th>HTTP Method</th>
+          <th>Query Parameter</th>
+          <th>Request data format</th>
+          <th>Response data body format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>List all movies</td>
+          <td>/movies</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>None</td>
+          <td>A JSON object holding data about all movies</td>
+        </tr>
+        <tr>
+          <td>Get single movie by name</td>
+          <td>/movies/:Title</td>
+          <td>GET</td>
+          <td>:Title</td>
+          <td>None</td>
+          <td>
+            A JSON object holding data about a single movie, containing a
+            description, genre, director, image URL, and whether it's featured
+            or not
+          </td>
+        </tr>
+        <tr>
+          <td>Get data about a genre (description) by name/title</td>
+          <td>/movies/genre/:Name</td>
+          <td>GET</td>
+          <td>:Name</td>
+          <td>None</td>
+          <td>A JSON object holding data about a specific genre</td>
+        </tr>
+        <tr>
+          <td>Get data about a director by name</td>
+          <td>/movies/director/:Name</td>
+          <td>GET</td>
+          <td>:Name</td>
+          <td>None</td>
+          <td>
+            A JSON object holding data about a director (bio, birth year, death
+            year)
+          </td>
+        </tr>
+
+        <tr>
+          <td>Allow new users to register</td>
+          <td>/users</td>
+          <td>POST</td>
+          <td>None</td>
+
+          <td>
+            A JSON object holding data about the user to add like: { "Username":
+            "", "Password": "", "Email: " "", "Birthday": ""}
+          </td>
+          <td>
+            A JSON object holding data about the user that was added, including
+            an ID
+          </td>
+        </tr>
+        <tr>
+          <td>Allow users to update their user info</td>
+          <td>/users/:Username</td>
+          <td>PUT</td>
+          <td>:Username</td>
+          <td>None</td>
+          <td>A text message indicating the username was updated</td>
+        </tr>
+        <tr>
+          <td>Allow users to add a movie to their list of favorites</td>
+          <td>/users/:Username/movies/:_id</td>
+          <td>POST</td>
+          <td>:Username :_id</td>
+          <td>None</td>
+          <td>A text message indicating the movie was added</td>
+        </tr>
+        <tr>
+          <td>Allow users to remove a movie from their list of favorites</td>
+          <td>/users/:Username/movies/:_id</td>
+          <td>DELETE</td>
+          <td>:Username :id</td>
+          <td>None</td>
+          <td>A text message indicating the movie was removed</td>
+        </tr>
+        <tr>
+          <td>Allow existing users to deregister</td>
+          <td>/users/:Username</td>
+          <td>DELETE</td>
+          <td>:Username</td>
+          <td>None</td>
+          <td>A text message indicating the user was removed</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>

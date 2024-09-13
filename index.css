@@ -1,0 +1,28 @@
+body,
+html {
+  box-sizing: border-box;
+  margin: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.headerText {
+  text-align: center;
+  font-style: italic;
+}
+
+table {
+  margin: 2rem;
+  background-color: gainsboro;
+}
+
+tr {
+  background-color: aliceblue;
+}
+
+td {
+  padding: 0.5rem;
+}
