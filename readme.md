@@ -5,16 +5,11 @@ This is a REST API backend server for the following apps that are also in my rep
 - myFlix-client
 - myFlix-Angular
 
-## Documentation page
-
-A documentation table is provided to explain what's needed to retrieve information using the moviesAPI
-
-https://movieapi-yazx.onrender.com/documentation.html
-
-## Tech Stack
+## Tech Stack and other info
 
 - Nodejs
 - Express
+- Passport
 - MongoDB
 - React
-- Hosting through Render
+- Hosted through Render

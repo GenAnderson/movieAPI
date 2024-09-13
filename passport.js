@@ -14,7 +14,7 @@ passport.use(
       passwordField: "Password",
     },
     (username, password, callback) => {
-      console.log(username + " " + password);
+      // console.log(username + " " + password);
       Users.findOne({ Username: username })
         .then((user) => {
           if (!user) {
