@@ -1,6 +1,6 @@
 # Movie API
 
-This is a REST API backend server for the following apps that are also in my repo:
+This is a RESTapi for the following apps that are also available in my repo:
 
 - myFlix-client
 - myFlix-Angular

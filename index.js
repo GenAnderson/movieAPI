@@ -25,6 +25,7 @@ let allowedOrigins = [
   "http://localhost:1234",
   "http://localhost:4200",
   "http://localhost:3000",
+  "http://localhost:5173",
   "http://testsite.com",
   "https://bestmovielist.netlify.app",
   "https://genanderson.github.io",
