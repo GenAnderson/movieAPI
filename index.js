@@ -30,6 +30,7 @@ let allowedOrigins = [
   "https://bestmovielist.netlify.app",
   "https://genanderson.github.io",
   "http://myflixclient-bucket.s3-website-us-east-1.amazonaws.com",
+  "https://genanderson.github.io/myflix-updatedclient/",
 ];
 
 app.use(
